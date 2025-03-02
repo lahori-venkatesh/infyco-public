@@ -118,6 +118,7 @@ export default function MentorsPage() {
                   : [...prev, skill]
               );
             }}
+            onConnect={() => {}}
           />
           <MentorSort sortBy={sortBy} onSortChange={setSortBy} />
         </div>

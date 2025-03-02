@@ -14,9 +14,10 @@ import type { Mentor } from "@/lib/types";
 
 interface MentorCardProps {
   mentor: Mentor;
+  onConnect: () => void;
 }
 
-export function MentorCard({ mentor }: MentorCardProps) {
+export function MentorCard({ mentor, onConnect }: MentorCardProps) {
   const [isLiked, setIsLiked] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [showChat, setShowChat] = useState(false);
@@ -95,7 +96,10 @@ export function MentorCard({ mentor }: MentorCardProps) {
 
           <Button
             className="w-full mt-4"
-            onClick={() => setShowProfile(true)}
+            onClick={() => {
+              setShowProfile(true);
+              onConnect();
+            }}
           >
             <span className="text-white">View Details & Connect</span>
           </Button>
