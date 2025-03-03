@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { MentorCard } from "@/components/mentors/mentor-card";
@@ -12,6 +13,14 @@ import { categories } from "@/lib/categories-data";
 import { Search } from "lucide-react";
 
 export default function MentorsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MentorsContent />
+    </Suspense>
+  );
+}
+
+function MentorsContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
   

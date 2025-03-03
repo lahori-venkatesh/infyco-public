@@ -179,7 +179,7 @@ export function MentorProfile({ mentor, isOpen, onClose }: MentorProfileProps) {
                 selectedDate={selectedDate}
                 selectedTime={selectedTime}
                 onDateSelect={setSelectedDate}
-                onTimeSelect={setTimeString => setSelectedTime(timeString)}
+                onTimeSelect={(timeString) => setSelectedTime(timeString)}
                 onProceed={handleBookingComplete}
               />
             ) : (

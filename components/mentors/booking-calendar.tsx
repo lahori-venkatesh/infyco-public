@@ -1,6 +1,7 @@
 "use client";
 
 import { Calendar } from "@/components/ui/calendar";
+import type { SelectSingleEventHandler } from "react-day-picker";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -17,7 +18,7 @@ interface BookingCalendarProps {
   mentor: Mentor;
   selectedDate?: Date;
   selectedTime?: string;
-  onDateSelect: (date: Date) => void;
+  onDateSelect: SelectSingleEventHandler;
   onTimeSelect: (time: string) => void;
   onProceed: () => void;
 }
