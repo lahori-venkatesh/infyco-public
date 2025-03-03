@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Star } from "lucide-react";
 import type { Mentor } from "@/lib/types";
@@ -17,9 +18,11 @@ export function ReviewsTab({ mentor }: ReviewsTabProps) {
           {mentor.reviews?.map((review) => (
             <div key={review.id} className="p-4 rounded-lg border">
               <div className="flex items-start gap-4">
-                <img
+                <Image
                   src={review.authorImage}
                   alt={review.author}
+                  width={40}
+                  height={40}
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <div className="flex-1">

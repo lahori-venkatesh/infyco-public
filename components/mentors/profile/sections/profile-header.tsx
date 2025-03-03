@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, MessageCircle, Heart, MapPin, Building2 } from "lucide-react";
@@ -20,9 +21,11 @@ export function ProfileHeader({ mentor }: ProfileHeaderProps) {
       <div className="p-6 -mt-12">
         <div className="flex items-start gap-6">
           <div className="relative">
-            <img
+            <Image
               src={mentor.image}
               alt={mentor.name}
+              width={96}
+              height={96}
               className="w-24 h-24 rounded-full border-4 border-background object-cover"
             />
             <Badge className="absolute -bottom-2 right-0">

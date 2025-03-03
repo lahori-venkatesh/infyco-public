@@ -14,7 +14,7 @@ import type { Mentor } from "@/lib/types";
 
 interface MentorCardProps {
   mentor: Mentor;
-  onConnect: () => void;
+  onConnect?: () => void;
 }
 
 export function MentorCard({ mentor, onConnect }: MentorCardProps) {
@@ -98,7 +98,7 @@ export function MentorCard({ mentor, onConnect }: MentorCardProps) {
             className="w-full mt-4"
             onClick={() => {
               setShowProfile(true);
-              onConnect();
+              onConnect?.();
             }}
           >
             <span className="text-white">View Details & Connect</span>

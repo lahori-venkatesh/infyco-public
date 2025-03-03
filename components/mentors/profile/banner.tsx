@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heart, MessageCircle, MapPin, Globe } from "lucide-react";
 import { useState } from "react";
@@ -25,11 +26,14 @@ export function ProfileBanner({ mentor, onMessageClick }: ProfileBannerProps) {
         <div className="flex items-start gap-6">
           {/* Profile Image */}
           <div className="relative">
-            <img
-              src={mentor.image}
-              alt={mentor.name}
-              className="w-24 h-24 rounded-full border-4 border-background object-cover"
-            />
+            <div className="relative w-24 h-24">
+              <Image
+                src={mentor.image}
+                alt={mentor.name}
+                fill
+                className="rounded-full border-4 border-background object-cover"
+              />
+            </div>
             <Badge className="absolute -bottom-2 right-0">
               {mentor.experience}
             </Badge>

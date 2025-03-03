@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { BookingCalendar } from "@/components/mentors/booking-calendar";
 import { PaymentForm } from "@/components/mentors/payment-form";
+import Image from "next/image";
 import { Globe, Linkedin, Mail, Star } from "lucide-react";
 import type { Mentor } from "@/lib/types";
 
@@ -51,11 +52,14 @@ export function MentorProfile({ mentor, isOpen, onClose }: MentorProfileProps) {
 
               <TabsContent value="about" className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <img
-                    src={mentor.image}
-                    alt={mentor.name}
-                    className="w-24 h-24 rounded-full object-cover"
-                  />
+                  <div className="relative w-24 h-24">
+                    <Image
+                      src={mentor.image}
+                      alt={mentor.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
                   <div>
                     <h2 className="text-xl font-semibold">{mentor.name}</h2>
                     <p className="text-muted-foreground">{mentor.profession}</p>
