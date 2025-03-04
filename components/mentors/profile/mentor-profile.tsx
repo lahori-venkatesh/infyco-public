@@ -78,9 +78,9 @@ export function MentorProfile({ mentor, isOpen, onClose }: MentorProfileProps) {
         );
       default:
         return (
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <ProfileHeader mentor={mentor} />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="lg:col-span-2">
                 <ProfileTabs mentor={mentor} />
               </div>
@@ -109,12 +109,12 @@ export function MentorProfile({ mentor, isOpen, onClose }: MentorProfileProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] p-0">
-        <DialogHeader className="px-6 pt-6 pb-0">
+      <DialogContent className="max-w-4xl max-h-[90vh] p-0 sm:p-0">
+        <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6 pb-0">
           <DialogTitle>{getStepTitle()}</DialogTitle>
         </DialogHeader>
         <ScrollArea className="h-[calc(90vh-4rem)]">
-          <div className="p-6">{renderStepContent()}</div>
+          <div className="p-4 sm:p-6">{renderStepContent()}</div>
         </ScrollArea>
       </DialogContent>
     </Dialog>

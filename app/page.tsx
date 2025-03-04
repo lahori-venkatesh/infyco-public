@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CompaniesGrid } from "@/components/home/companies-grid";
 import { CategoryGrid } from "@/components/home/category-grid";
 import { TopMentors } from "@/components/home/top-mentors";
 import { HomeFooter } from "@/components/home/footer";
@@ -13,10 +12,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <HeroSection />
       
-      {/* Companies */}
-      <CompaniesGrid />
+    
 
-      {/* Categories */}
+     {/* Categories */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">

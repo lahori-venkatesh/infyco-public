@@ -72,33 +72,33 @@ export function BookingSection({ mentor, onProceed }: BookingSectionProps) {
   const allSelected = selectedSessions.length === sessions.length;
 
   return (
-    <Card className="p-6 sticky top-6">
-      <div className="space-y-6">
+    <Card className="p-4 sm:p-6 sticky top-6">
+      <div className="space-y-4 sm:space-y-6">
         <div>
-          <h2 className="text-xl font-semibold">Book a Session</h2>
-          <p className="text-sm text-muted-foreground mt-1">
+          <h2 className="text-lg sm:text-xl font-semibold">Book a Session</h2>
+          <p className="text-xs sm:text-sm text-muted-foreground mt-1">
             Choose your preferred mentoring session
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {sessions.map((session) => (
             <div
               key={session.id}
               className={cn(
-                "p-4 rounded-lg border transition-colors cursor-pointer",
+                "p-3 sm:p-4 rounded-lg border transition-colors cursor-pointer",
                 selectedSessions.includes(session.id)
                   ? "border-primary bg-primary/5"
                   : "hover:bg-accent/50"
               )}
               onClick={() => handleSessionToggle(session.id)}
             >
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-4">
                 <Checkbox
                   id={session.id}
                   checked={selectedSessions.includes(session.id)}
                   onCheckedChange={() => handleSessionToggle(session.id)}
-                  className="mt-1"
+                  className="mt-1 h-6 w-6 rounded box-border"
                 />
                 <div className="flex-1">
                   <label
@@ -107,15 +107,15 @@ export function BookingSection({ mentor, onProceed }: BookingSectionProps) {
                   >
                     {session.name}
                   </label>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">
                     {session.description}
                   </p>
                   <div className="flex items-center gap-3 mt-2">
-                    <Badge variant="secondary">
+                    <Badge variant="secondary" className="text-xs">
                       <Clock className="w-3 h-3 mr-1" />
                       {session.duration}
                     </Badge>
-                    <span className="text-sm font-medium">₹{session.price}</span>
+                    <span className="text-xs sm:text-sm font-medium">₹{session.price}</span>
                   </div>
                 </div>
               </div>
@@ -124,12 +124,12 @@ export function BookingSection({ mentor, onProceed }: BookingSectionProps) {
         </div>
 
         {allSelected && (
-          <div className="p-4 rounded-lg bg-primary/10">
+          <div className="p-3 sm:p-4 rounded-lg bg-primary/10">
             <div className="flex items-center gap-2">
-              <Gift className="w-5 h-5 text-primary" />
+              <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               <div>
-                <p className="font-medium">Unlock Job Referrals</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm font-medium">Unlock Job Referrals</p>
+                <p className="text-xs text-muted-foreground">
                   Get direct job referrals from {mentor.name}
                 </p>
               </div>
@@ -137,11 +137,11 @@ export function BookingSection({ mentor, onProceed }: BookingSectionProps) {
           </div>
         )}
 
-        <div className="pt-4 border-t">
+        <div className="pt-3 sm:pt-4 border-t">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <p className="text-sm text-muted-foreground">Total Amount</p>
-              <p className="text-2xl font-bold">₹{total}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Total Amount</p>
+              <p className="text-xl sm:text-2xl font-bold">₹{total}</p>
             </div>
           </div>
           <Button

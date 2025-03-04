@@ -23,27 +23,31 @@ export default function EventsPage() {
               <TabsList className="inline-flex w-full sm:w-auto h-auto p-0 bg-transparent">
                 <TabsTrigger 
                   value="upcoming"
-                  className="px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
+                  className="px-3 sm:px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
                 >
-                  📅 Upcoming Events
+                  <span className="hidden sm:inline">📅 Upcoming Events</span>
+                  <span className="sm:hidden">📅 Events</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="hackathons"
-                  className="px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
+                  className="px-3 sm:px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
                 >
-                  🔥 Trending Hackathons
+                  <span className="hidden sm:inline">🔥 Trending Hackathons</span>
+                  <span className="sm:hidden">🔥 Hackathons</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="jobs"
-                  className="px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
+                  className="px-3 sm:px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
                 >
-                  💼 Job & Internship Board
+                  <span className="hidden sm:inline">💼 Job & Internship Board</span>
+                  <span className="sm:hidden">💼 Jobs</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="bookings"
-                  className="px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
+                  className="px-3 sm:px-4 py-2 data-[state=active]:bg-primary/5 rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
                 >
-                  🎯 My Bookings
+                  <span className="hidden sm:inline">🎯 My Bookings</span>
+                  <span className="sm:hidden">🎯 Bookings</span>
                 </TabsTrigger>
               </TabsList>
             </ScrollArea>
