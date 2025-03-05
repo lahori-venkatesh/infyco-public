@@ -8,7 +8,7 @@ import { NavigationMenu } from '@/components/navigation-menu';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'InfyCo - Connect, Learn, Grow',
+  title: 'InfyCo - Connect, Learn, Grow by Venkatesh',
   description: 'Your platform for mentorship, career guidance, and knowledge sharing',
 };
 

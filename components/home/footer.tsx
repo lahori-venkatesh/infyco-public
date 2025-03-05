@@ -122,7 +122,7 @@ export function HomeFooter() {
         </div>
 
         <div className="mt-16 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} InfyCo. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} InfyCo. All rights reserved.Designed by Lahori Venkatesh NIT Jaipur</p>
         </div>
       </div>
     </footer>
