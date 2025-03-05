@@ -37,6 +37,17 @@ export function HomeFooter() {
                 </Link>
               </Button>
             </div>
+            <div className="mt-4 flex justify-center md:justify-start">
+              <Button variant="default" asChild>
+                <a
+                  href="https://forms.gle/3PQzbf1j5ZzH1HPJ6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Give Feedback
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Platform Links */}
@@ -112,17 +123,14 @@ export function HomeFooter() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link href="/feedback" className="text-sm text-muted-foreground hover:text-primary">
-                  Give Feedback
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} InfyCo. All rights reserved.Designed by Lahori Venkatesh NIT Jaipur</p>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} InfyCo. All rights reserved. Designed by Lahori Venkatesh NIT Jaipur
+          </p>
         </div>
       </div>
     </footer>
