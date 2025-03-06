@@ -2,7 +2,7 @@
 
 ## Infyco is a modern mentorship platform designed to connect students with industry professionals and peers across various categories for career guidance and knowledge sharing. Empowering users to connect with mentors, track their learning, and grow in their careers.
 
-![Hero Image](images/heroimage.png)
+![Hero Image](public/images/heroimage.png)
 
 Check out the live web app: [Infyco Live Demo](https://infyco.in/)
 
